@@ -70,7 +70,7 @@ a {
     background:#545353;
 }
 .header{
-    background-color:rgb(203, 181, 181);
+    background-color: #ffd6d6;
     margin:0;
     padding: 0;
 }
@@ -89,4 +89,26 @@ a {
     width:100%;
     max-width:250px;
     max-height:250px;
+}
+.small-container{
+    max-width: 1080px;
+    margin:auto;
+    padding-left:25px;
+    padding-right:25px;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.col-4 img{
+    width:100%;
+}
+.title{
+    text-align: center;
+    margin:0 auto 60px;
+    position: relative;
+    line-height: 50px;
+    color: #5052d8;
 }

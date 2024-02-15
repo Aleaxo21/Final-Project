@@ -18,8 +18,8 @@
 }
 .navbar{
     max-width: 100%;
-    background-color:#e3e1e1;
-    padding: 20px 0;
+    background-color:#040404;
+    padding: 10px 0;
 }
 nav{
     text-align: center;
@@ -36,7 +36,7 @@ nav ul li{
 }
 a {
     text-decoration: none;
-    color:rgb(82, 5, 155)
+    color:white;
 }
 .row {
     display: flex;
@@ -70,7 +70,7 @@ a {
     background:#545353;
 }
 .header{
-    background-color: #ffd6d6;
+    background-color: #aaa7fa;
     margin:0;
     padding: 0;
 }
@@ -101,6 +101,7 @@ a {
     padding: 10px;
     min-width: 200px;
     margin-bottom: 50px;
+    transition: transform 0.5s;
 }
 .col-4 img{
     width:100%;
@@ -122,4 +123,17 @@ a {
     bottom:0;
     left:50%;
     transform: translateX(-50%);
+}
+h4{
+    color:#040404;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size:14px;
+}
+.rating .fa{
+    color: #545353;
+}
+.col-4:hover{
+    transform: translateY(-5px);
 }

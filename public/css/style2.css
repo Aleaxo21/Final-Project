@@ -57,7 +57,7 @@ p{
 }
 .btn{
     display:inline-block;
-    background:orangered;
+    background:rgb(18, 18, 151);
     color: white;
     padding: 8px 30px;
     margin:30px 0;
@@ -65,10 +65,10 @@ p{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: rgb(118, 33, 2);
+    background: rgb(92, 38, 241);
 }
 .header{
-    background:rgb(252, 198, 198);
+    background:rgb(202, 198, 252);
 }
 .header .row{
     margin-top: 70px;
@@ -110,7 +110,7 @@ p{
 }
 .title::after{
     content:"";
-    background: rgb(255, 98, 0);
+    background: rgb(92, 38, 241);
     width:80px;
     height: 5px;
     border-radius:5px;
@@ -127,7 +127,7 @@ h4{
     font-size: 14px;
 }
 .rating .fa{
-    color:chocolate;
+    color:rgb(92, 38, 241);
 }
 .col-4:hover{
     transform: translateY(-5px);
@@ -135,7 +135,7 @@ h4{
 
 /*--offer--*/
 .offer{
-    background:rgb(252, 198, 198);
+    background:rgb(202, 198, 252);
     margin-top: 80px;
     padding:30px 0;
 }

@@ -55,6 +55,11 @@ p{
     line-height: 60px;
     margin: 25px 0;
 }
+.col-2 h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 600;
+}
 .btn{
     display:inline-block;
     background:rgb(18, 18, 151);
@@ -144,4 +149,80 @@ h4{
 }
 small{
     color:black;
+}
+/*ratings and feedback from customers*/
+
+.testimonial{
+    padding-top: 100px;
+}
+.testimonial .col-3{
+    text-align: center;
+    padding:40px 20px;
+    box-shadow: 0 0 20px 0px rgb(202, 198, 252);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3 img{
+    width: 200px;
+    margin-top:20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform:translateY(-10px);
+}
+/*bottom desgins*/
+.bottom{
+    background:black;
+    color:white;
+    font-size: 14px;
+    padding:60px 0 20px;
+}
+.bottom p{
+    color: white;
+}
+.bottom h3{
+    color: cornflowerblue;
+    margin-bottom: 20px;
+}
+.bottom-col-1, .bottom-col-2, .bottom-col-3, .bottom-col-4{
+    min-width:250px;
+    margin-bottom: 20px;
+}
+.bottom-col-1{
+    flex-basis:30%;
+}
+.bottom-col-2{
+    flex:1;
+    text-align:center;
+}
+.bottom-col-2 img{
+    width:180px;
+    margin-bottom:20px;
+}
+.applogo{
+    margin-top: 20px;
+}
+.applogo img{
+    width:140px;
+}
+.row-2{
+    justify-content: space-between;
+    margin:100px auto 50px;
+}
+.pagebtn{
+    margin:0 auto 80px;
+}
+.pagebtn span{
+    display: inline-block;
+    border: 1px solid black;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor:pointer;
+}
+.pagebtn span:hover{
+    background: cornflowerblue;
+    color: white
 }

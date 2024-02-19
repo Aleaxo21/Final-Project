@@ -1,17 +1,3 @@
-function loadProductData() {
-    var request = new XMLHttpRequest();
-    var productArray = [];
-    
-    request.open("GET", "http://localhost:8080/view", true);
-    
-    request.onload = function() {
-        productArray = JSON.parse(request.responseText);
-        insertDynamicProducts(productArray); // Call insertDynamicProducts here
-    };
-    
-    request.send();
-}
-
 function insertDynamicProducts(productArray) {
     let newContent = "<table><tr>";
 
@@ -30,6 +16,22 @@ function insertDynamicProducts(productArray) {
     document.getElementById("dynamicProductDataList").innerHTML = newContent;
 }
 
+function loadProductData() {
+    var request = new XMLHttpRequest();
+    var productArray = [];
+    
+    request.open("GET", "http://localhost:8080/view", true);
+    
+    request.onload = function() {
+        productArray = JSON.parse(request.responseText);
+        insertDynamicProducts(productArray); // Call insertDynamicProducts here
+    };
+    
+    request.send();
+}
+
+
+
 function addProductData() {
     var product = new Object(); 
     product.name = document.getElementById('name').value;
@@ -44,7 +46,7 @@ function addProductData() {
 
     request.onload = function(){
         alert(request.responseText);
-        loadProductAPI();
+        loadProductData();
     };
     request.send(JSON.stringify(product));
 }
@@ -53,11 +55,11 @@ function updateProductData(){
     var params = new URLSearchParams(location.search);
     var id = params.get("id");
     var product = new Object(); //create an object to be send over
-    product.name = document.getElementById('name').value;
-    product.description = document.getElementById('description').value;
-    product.price = document.getElementById('price').value;
-    product.category_id = document.getElementById('category_id').value;
-    product.picture = document.getElementById('picture').value;
+    document.getElementById('name').value =product.name;
+    document.getElementById('description').value = product.description;
+    document.getElementById('price').value = product.price;
+    document.getElementById('category_id').value =product.category_id;
+    document.getElementById('picture').value = product.picture;
 
     var id = document.getElementById('id').value;
 
@@ -79,7 +81,7 @@ function deleteProductData(item){
 
     request.open("delete","http://localhost:8080/update/" + id, true);
     request.onload = function(){
-        location.href = "inde"
+        location.href = "product.html"
     }
     request.send();
 }

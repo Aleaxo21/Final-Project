@@ -78,7 +78,7 @@ function deleteProductData(item){
     console.log('delete id'+id)
     var request = new XMLHttpRequest();
 
-    request.open("delete","http://localhost:8080/update/" + id, true);
+    request.open("DELETE","http://localhost:8080/update/" + id, true);
     request.onload = function(){
         location.href = "product.html"
     }

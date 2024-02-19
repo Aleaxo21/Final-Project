@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewpoint" content = "width=device-width, initial-scale=1.0">
+    <script src="public/js/ecommerce.js"></script>
+    <title>Update Products</title>
+</head>
+<body onload="loadProductData()">
+
+<h2>Update Product</h2>
+
+<form method = "post">
+    <input type = "text" id = "id" name ="id" hidden><br>
+
+    <label for ="name">Name</label><br>
+    <input type="text" id ="name" name="name" required><br>
+
+    <label for ="description">Description</label><br>
+    <input type="text" id ="description" name="description" required><br>
+
+    <label for ="price">Price</label><br>
+    <input type = "number" id ="price" name="price" required><br>
+
+    <label for ="category_id">Category ID</label><br>
+    <input type ="number" id ="category_id" name="category_id" required><br>
+
+    <label for ="picture">Picture</label><br>
+    <input type="text" id ="picture" name="picture"><br>
+
+    <input type="button" onclick="updateProductData()" value="Submit">
+    <input type="button" onclick="deleteProductData(this)" restId="" id="deletebutton" value="Delete">
+
+</form>
+</body>
+</html>

@@ -20,31 +20,34 @@ function loadProductData() {
     var request = new XMLHttpRequest();
     var productArray = [];
     
+    alert("Welcome to RedStore!");
     request.open("GET", "http://localhost:8080/view", true);
     
     request.onload = function() {
         productArray = JSON.parse(request.responseText);
+        alert(productArray);
         insertDynamicProducts(productArray); // Call insertDynamicProducts here
     };
     
     request.send();
 }
 
-
-
 function addProductData() {
     var product = new Object(); 
+    alert("Error");
     product.name = document.getElementById('name').value;
     product.description = document.getElementById('description').value;
     product.price = document.getElementById('price').value;
     product.category_id = document.getElementById('category_id').value;
     product.picture = document.getElementById('picture').value;
-
+    alert("Error");
     var request = new XMLHttpRequest();
     request.open("POST", "http://localhost:8080/add", true);
     request.setRequestHeader("Content-Type","application/json");
-
+    alert("Error");
+    
     request.onload = function(){
+        alert("Error");
         alert(request.responseText);
         loadProductData();
     };
@@ -70,6 +73,7 @@ function updateProductData(){
 
     request.onload = function(){
         alert(request.responseText)
+        location.href = "product.html"
     };
     request.send(JSON.stringify(restaurant));
 }

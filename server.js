@@ -17,7 +17,7 @@ console.log("web server running @ http://127.0.0.1:8080"); // output to console
 
 app.route('/view').get( function (req, res){
     var sql = "SELECT * FROM `e-commerce`.product";
-    db.query(sql,parameter,function(error,result){
+    db.query(sql,function(error,result){
         if(error){
             throw error;
         }else{
@@ -41,6 +41,7 @@ app.route('/update/:id').put(function(req,res){
 
 app.route('/add').post(function(req,res){
     var sql = "INSERT INTO `e-commerce`.product (name, description, price, category,_id, picture) VALUES(?,?,?,?,?)";
+    console.log("Hello");
     var parameter = [req.body.name, req.body.description, req.body.price, req.body.cateogry_id, req.body.picture];
     db.query(sql,parameter,function(error,result){
         if(error){

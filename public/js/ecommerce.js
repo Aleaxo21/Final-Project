@@ -1,35 +1,34 @@
-function loadProductData(){
+function loadProductData() {
     var request = new XMLHttpRequest();
-    var productArray=[];
+    var productArray = [];
     
-    request.open("GET","http://localhost:8080/view", true);
+    request.open("GET", "http://localhost:8080/view", true);
     
-    request.onload =function(){
+    request.onload = function() {
         productArray = JSON.parse(request.responseText);
-    }
+        insertDynamicProducts(productArray); // Call insertDynamicProducts here
+    };
+    
     request.send();
-    //<div id ="dynamicProductDataList">
-};
+}
 
-function insertDynamicProducts(productArray){
-    
-    let newContent = "<table><tr>"
+function insertDynamicProducts(productArray) {
+    let newContent = "<table><tr>";
 
-    
-    for (let i=0; i < productArray.length; i++){
-        
+    for (let i = 0; i < productArray.length; i++) {
         newContent += 
-            "<td><h4>" + productArray[i].name + "</h4>"+
-            "<img src = " + productArray[i].pciture + "width ='150'><br>" +
+            "<td><h4>" + productArray[i].name + "</h4>" +
+            "<img src='" + productArray[i].picture + "' width='150'><br>" +
             "</td>";
 
-        if ((i + 1) % 3 === 0 && i < productArray.length - 1){
-            newContent += "</tr><tr>"
+        if ((i + 1) % 3 === 0 && i < productArray.length - 1) {
+            newContent += "</tr><tr>";
         }
-    };
-};
+    }
 
-loadProductAPI();
+    // Append newContent to the HTML element with id dynamicProductDataList
+    document.getElementById("dynamicProductDataList").innerHTML = newContent;
+}
 
 function addProductData() {
     var product = new Object(); 
